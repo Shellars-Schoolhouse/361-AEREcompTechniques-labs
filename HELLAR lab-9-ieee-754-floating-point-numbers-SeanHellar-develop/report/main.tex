@@ -1,0 +1,164 @@
+\documentclass{article}
+
+% Adds the url command
+\usepackage{hyperref}
+% To remove paragraph indentation
+\usepackage{parskip}
+%adds url command
+\usepackage{url}
+%adds color options
+\usepackage{xcolor}
+%adds cool table stuff
+\usepackage{multirow}
+%lets me put table where I want
+\usepackage{float}
+%comment imperialism
+\usepackage{comment}
+
+
+
+
+
+\title{AERE 361: Lab 9}
+\date{Due 5 APR 2022}
+\author{Sean Hellar}
+
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Report Questions}
+
+1.) 
+
+% Please add the following required packages to your document preamble
+
+\begin{table}[H]
+  \caption{Bit Integer Ranges}
+  \label{my-label}
+  \begin{tabular}{lllll}
+    %NOTE: These are "ell" for "left alignment"
+    %You could also use "c" for "center" or "p" for "paragraph" --
+    %  see the manual for many other options!
+    \multirow{2}{*}{Size} & \multicolumn{2}{c}{Unsigned} & \multicolumn{2}{c}{Signed} \\
+                          & Min. Value    & Max. Value   & Min. Value   & Max. Value  \\
+    8-bit                 &0              &255           &-128          &127          \\
+    16-bit                &0              & 65535        &-32678        &32767         \\
+    32-bit                &0              & $2^{32}-1$   &$-2^{31}$      &$2^{31}-1$      \\
+    64-bit                &0              & $2^{64}-1$   &$-2^{63}$      &$2^{63}-1$
+  \end{tabular}
+\end{table}
+
+%\begin{tabular}{|c|c|p{4.2in}|}
+ % \hline
+ % \multirow{2}{*}{Size} & \multicolumn{2}{c}{Unsigned} & \multicolumn{2}{c}{Signed}  \\
+ % \hline
+ % \hline
+ % float & sum,div,etc & This keeps decimal places in the variables and math functions \\
+ % \hline
+ % \hline
+%\end{tabular}
+
+
+2.)
+\textbf{88:} \texttt{0101100} 
+\textbf{0:} \texttt{00000000}
+\textbf{1:} \texttt{00000001}
+\textbf{127:} \texttt{01111111}
+\textbf{255:} \texttt{11111111}
+
+3.)
+\textbf{88:} \texttt{0101100}
+\textbf{-44:} \texttt{11010100}
+\textbf{-1:} \texttt{11111111}
+\textbf{0:} \texttt{00000000}
+\textbf{1:} \texttt{00000001} \\
+\textbf{-128:} \texttt{10000000}
+\textbf{127:} \texttt{01111111}
+
+\begin{comment}
+%32 bit norm 
+4.) %positive
+\textbf{Smallest:}\texttt{1*$2^{126}$} \textbf{Largest:}\texttt{(2-$2^{-23}$)*$2^{127}$}
+
+%\texttt{$2^{-126}$ to $2^{32}$ or ($2^1$-$2^{-23}$)*$2^{127}$}
+
+5.) %negative
+\textbf{Smallest:}\texttt{-(2-$2^{-23}$)*$2^{127}$} \textbf{Largest:}\texttt{-1*$2^{126}$}
+%\texttt{$-2^{-126}$ to $-2^{32}$ or -(($2^1$-$2^{-23}$)*$2^{127}$)}
+
+%32 bit denorm 
+6.) %positive
+\textbf{Smallest:}\texttt{$2^{-23}$*$2^{-126}$} \textbf{Largest:}\texttt{stuff}
+
+7.) %negative
+\textbf{Smallest:}\texttt{stuff} \textbf{Largest:}\texttt{$-2^{-23}$*$2^{-126}$}
+
+%64 bit norm 
+8.) %positive
+\textbf{Smallest:}\texttt{1*$2^{-1022}$} \textbf{Largest:}\texttt{-(2-$2^{-52}$)*$2^{1023}$}
+
+9.) %negative
+\textbf{Smallest:}\texttt{-(2-$2^{-52}$)*$2^{1023}$} \textbf{Largest:}\texttt{-1*$2^{-1022}$}
+
+%64 bit denorm 
+
+10.) %positive
+\textbf{Smallest:}\texttt{$2^{-52}$*$2^{-1022}$} \textbf{Largest:}\texttt{stuff}
+
+
+11.) %negative
+\textbf{Smallest:}\texttt{stuff} \textbf{Largest:}\texttt{$-2^{-52}$*$2^{-1022}$}
+
+\end{comment}
+
+%honestly, idk about any of these cuz there seems to be multiple answers for each one
+%im just trusting the wikipedia page
+%well great, just found steve's table with all the answers
+
+
+%correct answers, thanks steve-o 
+%32 bit 
+4-7.)
+\textbf{Normalized:} $\pm 2^{-126}$ to (2$-2^{-23}$)*$2^{127}$ \\
+\textbf{Denormalized:} $\pm 2^{-149}$ to (1$-2^{-23}$)*$2^{127}$
+
+%64 bit
+8-11.)
+\textbf{Normalized} $\pm 2^{-1022}$ to (2$-2^{-52}$)*$2^{1023}$ \\
+\textbf{Denormalized} $\pm 2^{-1074}$ to (1$-2^{-52}$)*$2^{1023}$
+
+
+\newpage
+\section{Exercise 4}
+
+When using single precision, and \texttt{n = 10} then the solution converges to six, however when using double precision, and \texttt{n = 20} the solution converges to 100. The reason they converge on these numbers is becuase the decimal becomes to large for the magic box to tell the difference so it converges on its respective value.
+
+I'm not entirely sure why it breaks through 6 on iteration 16 in double precision, and I doubt I'll ever find out why. It makes a huge jump from 14 to 64 then then to 99, which makes little sense in either mathematics or computing.  
+
+
+
+
+
+\newpage
+
+\section{Sources}
+
+\url{https://tex.stackexchange.com/questions/297564/why-is-my-table-before-the-section-title}
+
+\url{https://latex-tutorial.com/subscript-superscript-latex/}
+
+\url{https://en.wikipedia.org/wiki/Single-precision_floating-point_format}
+
+\url{https://en.wikipedia.org/wiki/IEEE_754-1985}
+
+\url{http://steve.hollasch.net/cgindex/coding/ieeefloat.html}
+
+
+
+
+
+
+\end{document}

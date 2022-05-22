@@ -1,0 +1,135 @@
+\documentclass{article}
+
+% Adds the url command
+\usepackage{hyperref}
+% To remove paragraph indentation
+\usepackage{parskip}
+%adds url command
+\usepackage{url}
+
+
+
+\title{AERE 361: Lab 4}
+\date{Due 15 FEB 2022}
+\author{Sean Hellar}
+%\newcommand{\hmwkTitle}{Lab 4}
+%\newcommand{\hmwkDueDate}{15 FEB 2022}
+%\newcommand{\hmwkClass}{AERE 361}
+%\newcommand{\hmwkClassInstructor}{Prof. Rozier}
+%\newcommand{\hmwkAuthorName}{\textbf{SEAN HELLAR}}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Cheat Sheet}
+
+\begin{tabular}{|c|c|p{4.2in}|}
+  \hline
+  Command & Option & What this command/option combination does \\
+  \hline
+  \hline
+  float & sum,div,etc & This keeps decimal places in the variables and math functions \\
+  \hline
+  \hline
+  gcc & -o & Allows the c code to be compiled and named into an executbale file \\
+  \hline
+  \hline
+  = & ! & leaving the ! in front of the = creates a ``does not equal'' \\
+  \hline
+  \hline
+  time & programname & shows the total runtime of the program  \\
+  \hline
+  \hline
+  ctype.h & none & importing this library is espcially useful for checking characters \\
+  \hline
+  \hline
+  = & + & leaving the + in front of the = creates a sum statement \\
+  \hline
+  \hline
+  isalpha & none & checks whether a character is an alphabet or not \\
+  \hline
+  \hline
+  nested if loops & none & they are great for checking all conditions are met and deciding what step is next \\
+  \hline
+  \hline
+  || & none & signigies or is a parameter statement \\
+  \hline
+  \hline
+  int main & () & establishes main loop needed to run any code in c \\
+  \hline
+  \hline
+  int & name & intializes the name as a integer type variable, int can be changed for any kind of number \\
+  \hline
+\end{tabular}
+
+
+
+\newpage
+\section{Exercise 5 responses}
+
+\textbf{Problem 1} has two reported errors.
+\begin{itemize}
+  \item{The intializer element is not constant. To fix this I would add the intial \texttt{int main (void)} declaration needed for any code to compile.}
+  \item{There is a missing ; after \texttt{a + b}. To fix this I would add one.}
+  \item{In order for \texttt{printf} to work the code must have \texttt{stdio.h}}
+  \item{Since the sum of the equation exceeds 255 \texttt{int sum} must be used}
+\end{itemize}
+      
+\textbf{Problem 2} has two reported errors.
+\begin{itemize}
+  \item{The intializer element is not constant. Same as exercise 1, I would add the intial \texttt{int main (void)} declaration needed for any code to compile.}
+  \item{There is a missing ; after \texttt{a + b}. To fix this I would add one.}
+  \item{In order for \texttt{printf} to work the code must have \texttt{stdio.h}}
+  \item{In order to keep the decimal \texttt{float div} must be used. The print statement must now have \texttt{\%f} to print the decimal.}
+\end{itemize}
+
+\textbf{Problem 3} has two reported errors.
+\begin{itemize}
+  \item{There is a missing declaration specifier before the string constant and numeric constant. To fix this I would add the intial \texttt{int main (void)} declaration needed for any code to compile.}
+  \item{It adds \texttt{8882} instead of the last four zeros. It is not possible to print 20 zeroes. We can use \texttt{\%Lf} but even that does not have an accuracy of 20 decimal points.}
+\end{itemize}
+
+
+
+\newpage
+\section{Exercise 10}
+
+\begin{center} \begin{tabular}{|c|r|r|}
+    \hline
+    $n$ & Brute Force Time & Gauss Adder Time \\
+    \hline
+    \hline
+    1 & .042 & .036 \\ \hline
+    10 & .047 & .036 \\ \hline
+    100 & .048 & .036 \\ \hline
+    1000 & .045 & .045 \\ \hline
+    10000 & .051 & .048 \\ \hline
+\end{tabular} \end{center}
+
+
+Using the time command for both adders shows that the Gauss Adder is faster for smaller numbers, however with larger numbers the Brute Force Adder takes approximately the same amount of time as the Gauss Adder. While the intelligent and brute force method perform similarly, an intelligent program takes up less space than brute force. 
+
+Sum force works by starting at zero and adding 1, then adding 2 to that sum, then 3 and so on n amount of times. It is the most simple way to sum from 0 to n.
+
+Gaussian method uses the equation \texttt{(n(n+1))/2}. This allows the user to enter any number n and solves the sum in an intelligent way. 
+
+\newpage
+\section{Sources}
+
+Used for Exercise 5. Shows how to keep decimal places in operations.
+\begin{itemize}
+\item{\url{https://linuxhint.com/setting_decimal_precision_c_-language/}}
+\end{itemize}
+
+Used for Exercises 7-9. Websites outline the basics of loops, nested loops and check statements.
+\begin{itemize}
+\item{\url{https://www.codesdope.com/c-loop-and-loop/}}
+\item{\url{https://stackoverflow.com/questions/24714287/break-out-of-if-statement/24714523}}
+\item{\url{https://www.tutorialspoint.com/c_standard_library/ctype_h.htm}}
+\end{itemize}
+
+
+
+\end{document}

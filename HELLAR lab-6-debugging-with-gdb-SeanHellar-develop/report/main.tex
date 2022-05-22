@@ -1,0 +1,108 @@
+\documentclass{article}
+
+% Adds the url command
+\usepackage{hyperref}
+% To remove paragraph indentation
+\usepackage{parskip}
+%adds url command
+\usepackage{url}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+%adds color options
+\usepackage{xcolor}
+
+
+
+
+\title{AERE 361: Lab 6}
+\date{Due 1 MAR 2022}
+\author{Sean Hellar}
+
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Exercise 2}
+
+\textbf{Algorithm and Design}
+\begin{itemize}
+\item{My program will use if loops to ask for user input and determine if it is credible}
+\end{itemize}
+
+\textbf{Complexity}
+\begin{itemize}
+\item{My algorithm uses as few \textbf{if} loops as I thought possible, so the least efficient part is the \textbf{while} loop that does the actual math. With higher input the computer will take more time since it must compute a power and factorial, both non-linear functions.}
+\end{itemize}
+
+
+
+\begin{algorithm}
+  \caption{Algorithm for finding the factorial}
+
+  \begin{algorithmic}
+    \Statex \Comment {Required variables:}
+    \State double error input
+    \State double error = 1
+    \State double x
+    \State double intial answer
+    \State double answer
+    \State int iteration
+
+    \State \Comment{creating variables given valid arguements}
+    \If {x greater than 1}
+    \State x = atof(i)
+    \State error input = atof(j)
+    \EndIf
+
+    \State \Comment{Begins loop to ask for user input}
+    \State \textbf{else}
+    \State printf user variable input statement
+    \State scanf for lf
+
+    \State \Comment{Checks that x is positive integer}
+    \If {x less than or eqaul 0}
+    \State printf error message needed x as positive
+    \State end program
+    \EndIf
+
+    \State
+    \State printf ask for relative error
+    \State scanf for lf
+
+    \State \Comment{Checks that error input is within bounds}
+    \If {error input not between 0 and 1}
+    \State printf error for invalid number
+    \State end program
+    \EndIf
+
+    \State
+    \State \textbf{end else}
+
+    \State \Comment{This is the Mclaurin series magic}
+    \While{error less than error input}
+    \State iteration = iteration + 1
+    \State intial answer = answer
+    \State answer = answer + math formula
+    \State error = fabs function * ( intial answer - answer)
+    \EndWhile
+
+    \State
+    \State printf final output
+ 
+  \end{algorithmic}
+\end{algorithm}
+
+    
+    
+
+
+
+
+
+
+
+
+\end{document}
+

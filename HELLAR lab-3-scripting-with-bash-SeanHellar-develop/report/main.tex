@@ -1,0 +1,95 @@
+\documentclass{article}
+
+% Adds the url command
+\usepackage{hyperref}
+% To remove paragraph indentation
+\usepackage{parskip}
+%adds url command
+\usepackage{url}
+
+% Update these:
+\title{Report Pain}
+\date{1 FEB 2022}
+\author{Sean Hellar}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Cheat Sheet}
+
+\begin{tabular}{|c|c|p{4.2in}|}
+  \hline
+  Command & Option & What this command/option combination does \\
+  \hline
+  \hline
+  \texttt{kill} & \texttt{-9} & Kills a \emph{process} (a running instanceof a program) identified from its PID \\
+  \hline
+  \hline
+  grep & filename & searches directory for all files inlcuding that filename \\
+  \hline
+  \hline
+  grep & -R & reads all files under current directory \\
+  \hline
+  \hline
+  wc & -l & prints the amount of lines \\
+  \hline
+  \hline
+  sed & /g & replaces all files in the directory with specified characters \\
+  \hline
+  \hline
+  tr & -s & replaces each sequence of a repeated character with specified character \\
+  \hline
+  \hline
+  cut & column num & cleanly extracts specified columns from file \\
+  \hline
+  \hline
+  nl & -s & allows a string to be added after column number \\
+  \hline
+  \hline
+  sed & s/carrot star// & removes leading edge spaces from file \\
+  \hline
+  \hline
+  perl & -p & asummes while loop but also prints result \\
+  \hline
+  \hline
+  perl & -e & reads one line of program \\
+  \hline
+  \hline
+  if & -lt/gt & can create a check loop to make sure data fits paremeters \\
+  \hline
+\end{tabular}
+
+
+
+
+\newpage
+
+\section{Sources}
+
+Used for exercise 4. Shows detailed uses of grep functions:
+\url{https://www.cyberciti.biz/faq/howto-search-find-file-for-text-string/}
+
+Used for exercise 5. Shows how to remove extra spaces:
+\url{https://stackoverflow.com/questions/13092360/how-to-remove-extra-spaces-in-bash}
+
+Used for exercise 6. Outlines the csvtool and benefits over awk:
+\url{https://stackoverflow.com/questions/19602181/how-to-extract-one-column-of-a-csv-file}
+
+Used for exercise 7. Shows how to eliminate leading space before column:
+\url{https://unix.stackexchange.com/questions/117040/removing-spaces-from-first-column}
+
+Used for exercise 8. Introduces using perl instead of sed.
+\url{https://stackoverflow.com/questions/13656215/how-can-i-use-sed-to-replace-blank-fields-in-a-csv-file-with-a-string}
+
+Honestly for exercise 9 I read through so many websites I lost track of where things came from. These are a few articles I read though.
+\url{https://stackoverflow.com/questions/32071879/access-cat-output-as-an-array-in-bash}
+\url{https://www.shell-tips.com/bash/math-arithmetic-calculation/}
+\url{https://stackoverflow.com/questions/450799/shell-command-to-sum-integers-one-per-line}
+\url{https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php} 
+
+
+
+
+\end{document}

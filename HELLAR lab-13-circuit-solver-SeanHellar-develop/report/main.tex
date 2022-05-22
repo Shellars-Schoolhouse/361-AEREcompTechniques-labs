@@ -1,0 +1,72 @@
+\documentclass{article}
+
+% Adds the url command
+\usepackage{hyperref}
+% To remove paragraph indentation
+\usepackage{parskip}
+%adds url command
+\usepackage{url}
+%adds color options
+\usepackage{xcolor}
+%adds cool table stuff
+\usepackage{multirow}
+%lets me put table where I want
+\usepackage{float}
+%comment imperialism
+\usepackage{comment}
+\usepackage{wasysym}
+
+
+
+
+
+\title{AERE 361: Lab 13}
+\date{Due 12 MAY 2022}
+\author{Sean Hellar}
+
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Report Questions}
+
+\textbf{Complexity Analysis}
+\begin{itemize}
+	\item{Overall complexity of code will be based on the bash script, C program and the Guass-jordan solver. The bash script is linear, thus has notation O(n). The C program is of notation O(${n^2}$), with n relative to the number of resistors in the circuit. Finally, the Gauss-Jordan Solver has complexity O(${n^2}$). The final complexity will be O(2${n^2}$) + O(n).}
+\end{itemize}
+
+
+\textbf{Loop Analysis}
+\begin{itemize}
+	\item{Since the bash script is linear, the majority of the complexity comes from the C program and Guass-jordan solver. The major loops contributing to the complexity are the variable and line counter function within the C program. The invariants of both loops will be the magnitudes of the variables and lines. I'm pretty sure the loop to print the answer within the Guass-jordan solver will not add to the complexity becuase we will only pass it once at the end of the program.}
+\end{itemize}
+
+\textbf{Final Comments}
+\begin{itemize}
+	\item{As you'll find out by running my bash/c the program is not complete. I ran into the problem of figuring out how to implement an array list from bash into c so that I could then use my \texttt{gauss\_jordan} solver from lab 11. My analysis is based on how my current code behaves and what I would have done, if I had the necessary intelligence. Sorry for the letdown, but I hope you (the grader) have a fufilling summer, as well as the other TA's \smiley{}.}
+\end{itemize}
+
+\newpage
+
+\section{Sources}
+Majority of bash scripting 
+\begin{itemize}
+	\item{\url{temporallogic.org/courses/AERE361/}}
+\end{itemize}
+
+Splitting the string to just read the coeffcients
+\begin{itemize}
+	\item{\url{https://www.educative.io/edpresso/splitting-a-string-using-strtok-in-c}}
+	\item{\url{https://www.w3resource.com/c-programming-exercises/string/c-string-exercise-3.php}}
+\end{itemize}
+
+Creating array list 
+\begin{itemize}
+	\item{\url{https://en.wikipedia.org/wiki/Linked_list#Singly-.2C_doubly-.2C_and_multiply-linked_lists}}
+\end{itemize}
+
+
+
+\end{document}

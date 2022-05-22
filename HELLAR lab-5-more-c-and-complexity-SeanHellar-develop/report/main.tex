@@ -1,0 +1,142 @@
+\documentclass{article}
+
+% Adds the url command
+\usepackage{hyperref}
+% To remove paragraph indentation
+\usepackage{parskip}
+%adds url command
+\usepackage{url}
+
+
+
+\title{AERE 361: Lab 5}
+\date{Due 22 FEB 2022}
+\author{Sean Hellar}
+
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Exercise 1}
+
+\textbf{Problem:}
+\begin{itemize}
+\item{The main goal is to open a file read a certain set of lines and output them to the user. In the last case we must create a file if given a new filename and fill it with numbers}
+\end{itemize}
+
+\textbf{Design:}
+\begin{itemize}
+\item{\textbf{Head}}
+  \begin{itemize}
+  \item{Begins by creating \texttt{filename = (char*) malloc(255 *sizeof(char))} which creates character memory for the filename.}
+  \item{Then \texttt{fopen} to variable \texttt{data} and check \texttt{if(data == NULL)} and print error if true}
+  \item{start loop \texttt{for 0:2} and \texttt{read} to \texttt{printf} strings on the lines}
+  \item{\texttt{fclose} file to end}
+  \end{itemize}
+\item{\textbf{Tail}}
+  \begin{itemize}
+  \item{Begins by creating \texttt{filename = (char*) malloc(255 *sizeof(char))} which creates character memory for the filename}
+  \item{Then \texttt{fopen} to variable \texttt{data} and check \texttt{if(data == NULL)} and print error if true}
+  \item{Use \texttt{fseek} and \texttt{SEEK\_END} to move pointer to the end of the file}
+  \item{Then \texttt{while 0:2} count from bottom up and if \texttt{fgetc} gets to new line \texttt{count++}}
+  \item{Finish with \texttt{free(filename)} and \texttt{fclose}}
+  \end{itemize}
+\item{\textbf{Out}}
+  \begin{itemize}
+  \item{Begins by creating \texttt{filename = (char*) malloc(255 *sizeof(char))} which creates character memory for the filename}
+  \item{Now \texttt{if data == NULL} then \texttt{fopen} and \texttt{for 1:100 fprintf} and \texttt{fclose}}
+  \item{Or \texttt{else} file already exists then \texttt{fclose}}
+  \end{itemize}
+\end{itemize}
+
+\textbf{Complexity:}
+\begin{itemize}
+\item{\textbf{Head: 0.054 sec}}
+\item{\textbf{Tail: 0.057 sec}}
+\item{\textbf{Out: 0.001 sec}}
+\end{itemize}
+
+
+
+\newpage
+
+\section{Exercise 2}
+
+\textbf{Problem:}
+\begin{itemize}
+\item{We need to create an array based on user input then retrieve the element asked for if possible and print it.}
+\end{itemize}
+
+\textbf{Design:}
+\begin{itemize}
+\item{Begin with \texttt{printf} to ask user for array size}
+\item{Then \texttt{if} exceeds 250, return error}
+\item{Use \texttt{malloc(sizeof(float) * num)} to create array memory}
+\item{With given formula loop \texttt{for i < num}}
+\item{Then \texttt{printf} ask for element to retrieve}
+\item{Check \texttt{if} element was within bounds, print error if not}
+\item{Fianlly \texttt{printf} element number and \texttt{free(array)}}
+\end{itemize}
+
+\textbf{Complexity:}
+\begin{itemize}
+\item{\textbf{Bounds: 0.020 sec}}
+\end{itemize}
+
+
+
+\newpage
+
+\section{Exercise 3}
+
+\textbf{Problem:}
+\begin{itemize}
+\item{We need to make an array that will print a pretty spiral matrix based on the user \texttt{n} input }
+\end{itemize}
+
+\textbf{Design:}
+\begin{itemize}
+\item{Intialize printing loop with \texttt{printmatrix(int,int,int)}}
+\item{Use \texttt{for m 0:N and for n 0:N} to create loop to print matrix}
+\item{Ask for user integer \texttt{printf} then \texttt{scanf} and test \texttt{if r:100} print error if not valid integer}
+\item{Then \texttt{malloc} fto allocate array and \texttt{for i 0:input} allocate columns}
+\item{Create \texttt{if input == 1} to print 1X1 matrix since it is outlier case}
+\item{Then \texttt{row and col = ceiling((input -1) / 2)} and intialize varaibles for current direction, counter and direction length}
+\item{Use 3 \texttt{for} loops to create magical spiral matrix}
+\end{itemize}
+
+\textbf{Complexity:}
+\begin{itemize}
+\item{\textbf{1X1 matrix: 0.082 sec}}
+\item{\textbf{10X10 matrix: 0.085 sec}}
+\item{\textbf{100X100 matrix: 2.655 sec}}
+  
+\end{itemize}
+
+
+\newpage
+
+\section{Sources}
+
+\url{https://stackoverflow.com/questions/18701924/get-a-segment-fault-while-reading-a-file}
+
+\url{https://stackoverflow.com/questions/17877025/reading-last-n-lines-from-file-in-c-c}
+
+\url{https://fresh2refresh.com/c-programming/c-file-handling/fseek-seek_set-seek_cur-seek_end-functions-c/}
+
+\url{https://unix.stackexchange.com/questions/25592/creating-a-sequence-of-numbers-one-per-line-in-a-file}
+
+\url{https://www.geeksforgeeks.org/power-function-cc/#:~:text=pow()(\%)20is(\%)20function(\%)20to,(\%)5E2(\%)2C(\%)20which(\%)20is(\%)2016}
+
+\url{https://stackoverflow.com/questions/9933724/creating-outward-spiral}
+
+\url{https://www.geeksforgeeks.org/print-a-given-matrix-in-spiral-form/}
+
+
+
+
+
+
+\end{document}

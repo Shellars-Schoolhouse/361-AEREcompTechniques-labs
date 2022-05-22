@@ -1,0 +1,118 @@
+\documentclass{article}
+
+% Adds the url command
+\usepackage{hyperref}
+% To remove paragraph indentation
+\usepackage{parskip}
+
+% Update these:
+\title{Pure Latex Poetry}
+\date{25 JAN 2022}
+\author{Sean Hellar}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Exercise 1}
+Using the \texttt{ls -ls} to list the files in order of time I found that main.log was the last changed file based on the timestamp. 
+
+Command: \texttt{ls -lt}
+
+Disphering output:\\
+From the output I looked at column with the timestamps becase it shows exactly when the files were last edited.
+
+Options used:
+\begin{itemize}
+    \item{\texttt{-lt} orders the files by modification time}
+\end{itemize}
+
+Sources of informtion:
+\begin{itemize}
+    \item{\texttt{man ls}: found list of options in manual}
+    \item{\texttt{https://www.tecmint.com/sort-ls-output-by-last-modified-date}}
+\end{itemize}
+
+
+\newpage
+\section{Exercise 2}
+I tried the wc command by itself but I didn't specify which files to look for so it didn't return anything. As instructed I needed to create a pipeline from the list of files to the wc search. 
+
+Command: \texttt{ls | wc -l}
+
+Disphering output:\\
+My output of 4 means that there are 4 files in my report directory at this current time. 
+
+Options used:
+\begin{itemize}
+    \item{\texttt{-l} prints the newline counts }
+\end{itemize}
+
+Sources of informtion:
+\begin{itemize}
+    \item{\texttt{man wc}: shows list of options in wc manual}
+\end{itemize}
+
+\newpage
+\section{Exercise 3}
+Using the \texttt{whereis ls} I was able to find the binary path of \texttt{ls} which happens to be rather short. 
+
+Command: \texttt{whereis ls}
+
+Disphering output:\\
+There were two printed paths from this command, but as noted in the lab manual the correct path must end \texttt{ls}. 
+
+Options used:
+\begin{itemize}
+    \item{\texttt{whereis ls} is just a simple mix of two commands}
+\end{itemize}
+
+Sources of informtion:
+\begin{itemize}
+    \item{\texttt{man whereis}: shows full description of \texttt{whereis} uses}
+\end{itemize}
+
+\newpage
+\section{Exercise 4}
+I used the find function and there a countless readme.txt files that I dont have permission for. I filtered out all the permission denied files so I could easily see the correct full paths.
+
+Command: \texttt{find.-namereadme.txt2>1|grep-v"Permission denied"}
+\begin{itemize}
+    \item{Note: there should be an ampersand between the \texttt{>} and \texttt{one}, but the script would not save or recognize it}
+\end{itemize}
+
+Disphering output:\\
+The given output displayed all files from the root directory down with name ``readme.txt''
+
+Options used:
+\begin{itemize}
+    \item{\texttt{-v message}: specifically finds the file with the given error message }
+\end{itemize}
+
+Sources of information:
+\begin{itemize}
+    \item{\texttt{https://www.cyberciti.biz/faq/bash-find-exclude-all/}}
+\end{itemize}
+
+\newpage
+\section{Exercise 5}
+In a fairly simple process I used \texttt{top} to output a list of running programs, CPU and memory usage and it continued to update live. 
+
+Command: \texttt{top}
+
+Disphering output:\\
+The numerous columns output the CPU and memory usage and at the top left corner of the output shows when it last updated.  
+
+Options used:
+\begin{itemize}
+    \item{\texttt{top} did not need any additional arguments }
+\end{itemize}
+
+Sources of information:
+\begin{itemize}
+    \item{\texttt{https://www.cyberciti.biz/faq/how-to-check-running}}
+\end{itemize}
+
+
+\end{document}
