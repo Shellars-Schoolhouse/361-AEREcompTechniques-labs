@@ -1,0 +1,85 @@
+\documentclass{article}
+
+% Adds the url command
+\usepackage{hyperref}
+% To remove paragraph indentation
+\usepackage{parskip}
+%adds url command
+\usepackage{url}
+%adds color options
+\usepackage{xcolor}
+%adds cool table stuff
+\usepackage{multirow}
+%comment imperialism
+\usepackage{comment}
+%psuedocode stuff
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+
+
+
+
+
+\title{AERE 361: Lab 11}
+\date{Due 28 APR 2022}
+\author{Sean Hellar}
+
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Exercise 1}
+
+\begin{algorithm}
+	\caption{Algorithm for Naive-Gauss time complexity}
+
+	\begin{algorithmic}
+		\Statex \Comment {Required variables:}
+		\State number of equations (n)
+		\State matrix1: matrix of coeffcients 
+		\State matrix2: matrix of answers
+
+		\State \Comment {Forward elimination}
+		\For {k=1 to n-1}
+			\For{i=k+1 to n}
+				\State normfactor = a(i,k) / a(k,k)
+				\For {j=k+1 to n}
+					\State matrix1(i,j) = matrix1(i,j) - normfactor * matrix1(k,j)
+				\EndFor
+				\State matrix2(i) = matrix2(i) - normfactor * matrix2(k)
+			\EndFor
+		\EndFor
+
+		\State \Comment {Backward elimination}
+		\State x(n) = matrix2(n) / matrix1(n,n)
+		\For {i=n-1 to -1}
+			\State initialize total at 0
+			\For {j=i+1 to n}
+				\State total =  total + matrix1(i,j) * x(j)
+			\EndFor
+			\State x(i) = matrix2(i) - total / matrix2(i,j)
+		\EndFor
+
+	\end{algorithmic}
+
+\end{algorithm}
+
+\textbf{Complexity:} The time complexity will be \texttt{O(2n$^{2}$)}. For each equation you add there is an increase in the power. 
+
+
+\newpage
+
+\section{Sources} 
+
+\url{https://my.mech.utah.edu/~pardyjak/me2040/Lect8_NaiveGaussElim.pdf}
+\url{https://www.geeksforgeeks.org/program-for-gauss-siedel-method-computational-mathematics/}
+
+
+
+
+
+
+
+\end{document}
