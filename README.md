@@ -5,7 +5,7 @@ The entire lab manual is attached, and I've also attached a pdf form of _C Progr
 
 **Note:**
 
-* Lab was partnered, mine is Logan Heying
+* Lab 8 was partnered, mine is Logan Heying
 * Our class did not do lab 12
 
 
