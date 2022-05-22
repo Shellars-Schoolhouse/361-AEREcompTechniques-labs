@@ -10,7 +10,7 @@ I highly recommend checking out my Professor's, Dr. Kristin Rozier, [website](ht
 * Lab 8 was partnered, mine is Logan Heying
 * Our class did not do lab 12
 * The point scale per lab is arbitrary, each lab was worth an equal amount in the final grade
-* Pretty please don't just downloand and submit my programs. I'm a unique idiot, so if your professor looks at your code they'll easily be able to tell no student of theirs would ever conjour these programs 🙃.  
+* Pretty please don't just downloand and submit my programs. I'm a unique idiot, so if your professor looks at your code they'll easily be able to tell no student of theirs would ever conjour these atrocities 🙃.  
 
 **Grades Received** 
 
