@@ -25,9 +25,9 @@ I highly recommend checking out my Professor's, Dr. Kristin Rozier, [website](ht
 * Lab 8: 41/50
 * Lab 9: 280/300
 * Lab 10: 70/75
-  * Report: Transposition time decreases
+  * Report: Transposition time decreases (-5).
 * Lab 11: 55/75
-  * Ex3:Incorrect output from user input, Ex3: incorret output from csv file input
+  * Ex3: Incorrect output from user input (-10), Ex3: incorret output from csv file input (-10).
 * Lab 13: 20/30
-  * Ex3: The bash script works, the c solver is unable to take proper form of matrix arguments. 
+  * Ex3: The bash script works, the c solver is unable to take proper form of matrix arguments (-10). 
 
