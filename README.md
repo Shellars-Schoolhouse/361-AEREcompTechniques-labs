@@ -1,4 +1,4 @@
-# 361-AEREcompTechniques-labs 
+-5)# 361-AEREcompTechniques-labs 
 
 All labs were instructional from Iowa State University, and had strong guidance from the Prof. and TA's. The grade received for each lab is denoted below, with comments for missing points. 
 The entire lab manual is attached, and I've also attached a pdf form of _C Programming Language_ by Brian K and Dennis R, so use as needed. 
@@ -21,8 +21,10 @@ I highly recommend checking out my Professor's, Dr. Kristin Rozier, [website](ht
 * Lab 3: 140/150
   * ah double tab
 * Lab 4: 145/160
+  * Ex6: Failed to output "Hello, world!" (-5), Ex8: Failed to reject invalid integer (-5), Ex8: Failed to reject invalid mixtue (-5). 
 * Lab 5: 80/120
 * Lab 6: 93/100
+  * Report: Labeled lops is missing (-5), complexity is not clear (-2).
 * Lab 7: 140/160
   * Gauss Quad: computed 0 test integrals (-20).
 * Lab 8: 41/50
