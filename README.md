@@ -17,18 +17,18 @@ I highly recommend checking out my Professor's, Dr. Kristin Rozier, [website](ht
 *Note: if a comment doesn't make sense I was confused too, most the programs work well, but fail in specific cases*
 
 * Lab 2: 100/100
-  * test
 * Lab 3: 140/150
-  * ah double tab
+  * Ex9: Reason unknown (-10).
 * Lab 4: 145/160
   * Ex6: Failed to output "Hello, world!" (-5), Ex8: Failed to reject invalid integer (-5), Ex8: Failed to reject invalid mixtue (-5). 
 * Lab 5: 80/120
+  * Ex1: Failed to compile 'head.c' (-10), Failed to compile 'tail.c' (-10), score proportional to number of cases (-10), Report: complexity in term of n (-10).
 * Lab 6: 93/100
   * Report: Labeled lops is missing (-5), complexity is not clear (-2).
 * Lab 7: 140/160
   * Gauss Quad: computed 0 test integrals (-20).
 * Lab 8: 41/50
-  * Integration Header: found 2/3 struct members (-5), failed to compile (-4).
+  * Integration Header: Found 2/3 struct members (-5), failed to compile (-4).
 * Lab 9: 280/300
   * Ex3: 1 test case failed 0 (-10), Ex4: expect overshoot without -d flag (-10).
 * Lab 10: 70/75
