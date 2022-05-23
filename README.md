@@ -13,6 +13,7 @@ I highly recommend checking out my Professor's, Dr. Kristin Rozier, [website](ht
 * Pretty please don't just downloand and submit my programs. I'm a unique idiot, so if your professor looks at your code they'll easily be able to tell no student of theirs would ever conjour these atrocities 🙃.  
 
 **Grades Received** 
+*Note: if a comment doesn't make sense I was confused too, most the programs work well, but fail in specific cases*
 
 * Lab 2: 100/100
   * test
