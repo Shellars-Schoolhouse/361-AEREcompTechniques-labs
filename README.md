@@ -22,8 +22,11 @@ I highly recommend checking out my Professor's, Dr. Kristin Rozier, [website](ht
 * Lab 5: 80/120
 * Lab 6: 93/100
 * Lab 7: 140/160
+  * Gauss Quad: computed 0 test integrals (-20).
 * Lab 8: 41/50
+  * Integration Header: found 2/3 struct members (-5), failed to compile (-4).
 * Lab 9: 280/300
+  * Ex3: 1 test case failed 0 (-10), Ex4: expect overshoot without -d flag (-10).
 * Lab 10: 70/75
   * Report: Transposition time decreases (-5).
 * Lab 11: 55/75
