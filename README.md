@@ -15,6 +15,7 @@ I highly recommend checking out my Professor's, Dr. Kristin Rozier, [website](ht
 **Grades Received** 
 
 * Lab 2: 100/100
+  * test
 * Lab 3: 140/150
 * Lab 4: 145/160
 * Lab 5: 80/120
